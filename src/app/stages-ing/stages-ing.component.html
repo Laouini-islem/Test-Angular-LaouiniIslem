@@ -1,0 +1,7 @@
+<ul *ngFor="let i of getlistStages()">
+
+    <li> {{i.titre}} </li> <a [routerLink]="['/DetailStage',i.id]">Details</a>
+    <button (click)="deleteStage(i.id)">delete</button>
+</ul>
+
+

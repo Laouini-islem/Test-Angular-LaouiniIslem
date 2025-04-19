@@ -1,0 +1,12 @@
+{
+  "Stage": [
+    {
+      "id": 1,
+      "titre": "Stage1",
+      "description": "Description",
+      "entreprise": "Neoxam",
+      "disponible": true,
+      "nbrInteresse": 1
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+<div class="container">
+    <form [formGroup]="formadd">
+      
+      <!-- titre Field -->
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">titre</span>
+        </div>
+        <input type="text" class="form-control" formControlName="titre">
+      </div>
+      <div *ngIf="formadd.get('titre')?.invalid && formadd.get('titre')?.touched" class="alert alert-danger">
+        Le champ name de propriétaire doit commencer par une lettre majuscule
+      </div>
+  
+      <!-- desc Field -->
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">description</span>
+        </div>
+        <input type="text" class="form-control" formControlName="description">
+      </div>
+      <div *ngIf="formadd.get('description')?.invalid && formadd.get('description')?.touched" class="alert alert-danger">
+        Description doit contenir au moins 3 caractères
+      </div>
+
+        <!-- nbrInteresse Field -->
+        <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text">nbrInteresse</span>
+            </div>
+            <input type="text" class="form-control" formControlName="nbrInteresse">
+          </div>
+          
+
+      <!-- entreprise Field -->
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">entreprise</span>
+        </div>
+        <input type="text" class="form-control" formControlName="entreprise">
+      </div>
+      
+  
+      <!-- Dispo Field -->
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">disponible</span>
+        </div>
+        <input type="text" class="form-control" formControlName="disponible">
+      </div>
+      <div *ngIf="formadd.get('disponible')?.invalid && formadd.get('disponible')?.touched" class="alert alert-danger">
+        Adresse invalide (doit commencer par une majuscule, suivie d'une minuscule, et au moins 5 caractères).
+      </div>
+  
+
+      
+      <button class="btn btn-primary" (click)="addStage()" [disabled]="formadd.invalid">Submit</button>
+    </form>
+  </div>
